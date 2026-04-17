@@ -23,6 +23,9 @@ input_data = {}
 for feature in features:
     input_data[feature] = st.number_input(f"{feature}", value=0.0)
 
+import pickle
+pickle.dump(model, open("models/model.pkl", "wb"))
+
 import os
 import pickle
 
