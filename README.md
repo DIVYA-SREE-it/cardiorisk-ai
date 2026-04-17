@@ -214,6 +214,6 @@ Always consult a qualified healthcare professional for medical advice.
 
 ## Contact
 
-- 📁 GitHub: [divya-sree-it/cardiorisk-ai](https://github.com/your-username/cardiorisk-ai)
-- 🌐 Live Demo: [CVD Risk Prediction.streamlit.app](https://your-app.streamlit.app)
+- 📁 GitHub: [divya-sree-it/cardiorisk-ai]((https://github.com/DIVYA-SREE-it/cardiorisk-ai))
+- 🌐 Live Demo: [CVD Risk Prediction.streamlit.app](https://cardiorisk-ai-s3gkoz9h886zueevzl28o5.streamlit.app/)
 - 📧 Email: divyasrirajaram@email.com
