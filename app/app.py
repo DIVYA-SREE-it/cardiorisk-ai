@@ -23,6 +23,14 @@ input_data = {}
 for feature in features:
     input_data[feature] = st.number_input(f"{feature}", value=0.0)
 
+import os
+import pickle
+
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+model_path = os.path.join(BASE_DIR, "models", "model.pkl")
+
+model = pickle.load(open(model_path, "rb"))
+
 # ===============================
 # PREDICT
 # ===============================
