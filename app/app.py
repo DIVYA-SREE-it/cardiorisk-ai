@@ -34,6 +34,16 @@ steps = st.slider("Daily Steps", 0, 20000, 5000)
 sleep = st.slider("Sleep Hours", 0.0, 12.0, 6.5)
 hr = st.slider("Average Heart Rate", 40, 120, 70)
 
+model = pickle.load(open(model_path, "rb"))
+
+# Dummy fallback
+scaler = None
+feature_names = [
+    "age","sex","chol","trestbps",
+    "steps","sleep_hours","avg_hr",
+    "lifestyle_score","stress_index"
+]
+
 # Encode
 sex = 1 if sex == "Male" else 0
 
@@ -71,8 +81,10 @@ input_df = pd.DataFrame([input_dict])[feature_names]
 if st.button("🔍 Predict Risk"):
 
     try:
-        X_scaled = scaler.transform(input_df)
-        risk = model.predict_proba(X_scaled)[0][1]
+        if scaler:
+            X_scaled = scaler.transform(input_df)
+        else:
+            X_scaled = input_df.values
 
         # Risk category
         if risk < 0.3:
