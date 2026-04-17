@@ -1,0 +1,1 @@
+{"model_name": "Logistic Regression", "n_features": 13, "features": ["age", "sex", "trestbps", "chol", "bmi", "thalach", "w_avg_hr", "w_resting_hr", "steps", "calories", "lifestyle_score", "activity_level_enc", "bp_cat_enc"]}
